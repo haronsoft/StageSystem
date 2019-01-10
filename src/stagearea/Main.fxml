@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="534.0" prefWidth="1056.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stagearea.FXMLDocumentController">
+    <stylesheets>
+        <URL value="@main.css" />
+    </stylesheets>
+   <children>
+      <Label alignment="CENTER" layoutX="178.0" layoutY="14.0" prefHeight="51.0" prefWidth="362.0" text="WELCOME TO NEWBUS COMPANY" textAlignment="CENTER" textFill="#fdb81e" underline="true">
+         <font>
+            <Font name="Gentium Book Basic Bold" size="22.0" />
+         </font>
+         
+      </Label>
+      <Label alignment="CENTER" layoutX="25.0" layoutY="110.0" prefHeight="36.0" prefWidth="168.0" text="Name" textFill="#112e51">
+         <font>
+            <Font name="Gentium" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="25.0" layoutY="171.0" prefHeight="36.0" prefWidth="168.0" text="Age" textFill="#112e51">
+         <font>
+            <Font name="Gentium" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="filledName" alignment="CENTER" layoutX="216.0" layoutY="110.0" prefHeight="36.0" prefWidth="219.0" promptText="Customers name">
+         <font>
+            <Font name="Gentium Basic" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="filledAge" alignment="CENTER" layoutX="216.0" layoutY="172.0" prefHeight="39.0" prefWidth="219.0" promptText="CustomersAge">
+         <font>
+            <Font name="Gentium Basic Bold" size="16.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="comboBoxOrigin" layoutX="95.0" layoutY="273.0" onAction="#originStation" prefHeight="44.0" prefWidth="168.0" promptText="OriginZone">
+        
+      </ComboBox>
+      <ComboBox fx:id="comboBoxDestination" layoutX="314.0" layoutY="273.0" onAction="#destinationStation" prefHeight="44.0" prefWidth="168.0" promptText="Destination Zone">
+         
+      </ComboBox>
+      <ComboBox fx:id="comboBoxDays" layoutX="512.0" layoutY="273.0" onAction="#numberOfDaysSelected" prefHeight="44.0" prefWidth="168.0" promptText="Number Of Days">
+        
+      </ComboBox>
+      <Label fx:id="zoneonelabel" layoutX="750.0" layoutY="172.0" prefHeight="26.0" prefWidth="78.0" text="Origin" textFill="#efff0d" />
+      <Label fx:id="zonetwo" layoutX="750.0" layoutY="216.0" prefHeight="26.0" prefWidth="78.0" text="Destination" textFill="#efff0d" />
+      <TextField fx:id="originField" layoutX="840.0" layoutY="172.0" prefHeight="26.0" prefWidth="145.0" />
+      <TextField fx:id="destinationField" layoutX="840.0" layoutY="216.0" prefHeight="26.0" prefWidth="145.0" />
+      <Label fx:id="days" layoutX="750.0" layoutY="261.0" prefHeight="26.0" prefWidth="78.0" text="Days" textFill="#efff0d" />
+      <TextField fx:id="daysField" layoutX="840.0" layoutY="260.0" prefHeight="26.0" prefWidth="145.0" />
+      <Label fx:id="name" layoutX="750.0" layoutY="95.0" prefHeight="26.0" prefWidth="78.0" text="Name" textFill="#efff0d" />
+      <Label fx:id="origin" layoutX="750.0" layoutY="132.0" prefHeight="26.0" prefWidth="78.0" text="Age" textFill="#efff0d" />
+      <TextField fx:id="nameField" layoutX="840.0" layoutY="95.0" prefHeight="26.0" prefWidth="145.0" />
+      <TextField fx:id="ageField" layoutX="840.0" layoutY="133.0" prefHeight="26.0" prefWidth="145.0" />
+      <Label fx:id="discount" layoutX="750.0" layoutY="304.0" prefHeight="26.0" prefWidth="78.0" text="Amout Paid" textFill="#efff0d" />
+      <TextField fx:id="totalAmountPaid" layoutX="840.0" layoutY="304.0" prefHeight="26.0" prefWidth="145.0" />
+      <Label fx:id="days1" layoutX="750.0" layoutY="339.0" prefHeight="26.0" prefWidth="78.0" text="Discount" textFill="#efff0d" />
+      <TextField fx:id="discountReceived" layoutX="840.0" layoutY="339.0" prefHeight="26.0" prefWidth="145.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="765.0" layoutY="47.0" prefHeight="36.0" prefWidth="219.0" text="Customer Details" textFill="#f9c642" underline="true">
+         <font>
+            <Font name="DejaVu Serif Bold" size="17.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" defaultButton="true" layoutX="840.0" layoutY="380.0" mnemonicParsing="false" onAction="#generateReceipt" prefHeight="36.0" prefWidth="145.0" text="Generate Receipt" textAlignment="CENTER" wrapText="true" />
+      <DatePicker fx:id="datepicker" layoutX="14.0" layoutY="34.0" onAction="#showDate" prefHeight="26.0" prefWidth="117.0" promptText="selectdate">
+         <effect>
+            <Glow level="0.35" />
+         </effect></DatePicker>
+      <Label fx:id="datepickerlabel" alignment="CENTER" layoutX="578.0" layoutY="32.0" prefHeight="26.0" prefWidth="117.0" text="today's date" textFill="#1d00f5" underline="true">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <font>
+            <Font name="FreeMono Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button defaultButton="true" layoutX="594.0" layoutY="114.0" mnemonicParsing="false" onAction="#saveDataToDatabase" prefHeight="36.0" prefWidth="109.0" text="Save" />
+      <Button defaultButton="true" layoutX="466.0" layoutY="114.0" mnemonicParsing="false" onAction="#calculateAge" prefHeight="36.0" prefWidth="89.0" text="calcAge" />
+      <Button fx:id="offers" defaultButton="true" layoutX="466.0" layoutY="168.0" mnemonicParsing="false" onAction="#calculateOffers" prefHeight="36.0" prefWidth="89.0" text="Offer" />
+      <Button defaultButton="true" layoutX="594.0" layoutY="168.0" mnemonicParsing="false" onAction="#viewCustomers" prefHeight="36.0" prefWidth="109.0" text="ViewCustomers">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button defaultButton="true" layoutX="887.0" layoutY="14.0" mnemonicParsing="false" onAction="#setFare" prefHeight="36.0" prefWidth="89.0" text="setFare">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

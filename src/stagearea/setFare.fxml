@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="193.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stagearea.FXMLDocumentController">
+   <children>
+      <Label alignment="CENTER" layoutX="110.0" layoutY="14.0" prefHeight="33.0" prefWidth="187.0" text="Current Fare" textAlignment="JUSTIFY" textFill="#deee00" textOverrun="WORD_ELLIPSIS" underline="true">
+         <font>
+            <Font name="Gentium Basic" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fareAmount" alignment="CENTER" layoutX="110.0" layoutY="74.0" prefHeight="43.0" prefWidth="175.0" promptText="Fare Amount">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnsetFare" defaultButton="true" layoutX="135.0" layoutY="137.0" mnemonicParsing="false" onAction="#btnsetFareOk" prefHeight="33.0" prefWidth="135.0" text="OK" underline="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="306.0" prefWidth="553.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stagearea.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" layoutX="282.0" layoutY="221.0" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="131.0" text="Login" textFill="#944073">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="17.0" />
+         </font></Button>
+        <Label fx:id="label" layoutX="361.0" layoutY="38.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="124.0">
+         <font>
+            <Font name="Open Sans Condensed Bold" size="16.0" />
+         </font></Label>
+      <Label layoutX="174.0" layoutY="30.0" lineSpacing="2.0" prefHeight="41.0" prefWidth="216.0" text="LOGIN SECTION" textAlignment="CENTER" textFill="#561b61" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="96.0" prefHeight="33.0" prefWidth="131.0" text="Username">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="160.0" prefHeight="33.0" prefWidth="131.0" text="Password">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" alignment="CENTER" layoutX="213.0" layoutY="100.0" prefHeight="33.0" prefWidth="197.0" promptText="username">
+         <font>
+            <Font name="FreeMono" size="17.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordField" alignment="CENTER" layoutX="213.0" layoutY="164.0" prefHeight="33.0" prefWidth="197.0" promptText="password">
+         <font>
+            <Font name="FreeMono" size="17.0" />
+         </font>
+      </PasswordField>
+    </children>
+</AnchorPane>
